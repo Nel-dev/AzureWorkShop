@@ -2,7 +2,7 @@
 terraform {
   backend "azurerm" {
     resource_group_name  = "Terraform-ResourceGroup"
-    storage_account_name = "pandatfstates666"
+    storage_account_name = "pandatfstates6666"
     container_name       = "tfstate"
     key                  = "panda.tfstate"
   }
