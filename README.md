@@ -1,5 +1,13 @@
 # My First Azure Terraform App
 
+[![Build Status](https://dev.azure.com/habibmanzur/PandaClub/_apis/build/status%2Fhmanzur.azure-terraform-playground?branchName=main)](https://dev.azure.com/habibmanzur/PandaClub/_build/latest?definitionId=3&branchName=main)
+
+Setup backend configuration https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli
+
+## Create a Service Principal
+
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
+
 ## Commands
 
 ### Init
