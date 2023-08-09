@@ -11,28 +11,13 @@ pool:
   vmImage: ubuntu-latest
   # vmImage: macOS-latest
 
-steps:
-- task: TerraformInstaller@0
-  displayName: Setup Terraform
-  inputs:
-    terraformVersion: 1.5.4
+resources:
+  repositories:
+    - repository: Terraform
+      type: github
+      endpoint: Nel-dev
+      name: Nel-dev/Azure-terraform
+      ref: main
 
-- task: TerraformCLI@0
-  displayName: Install Dependencies
-  inputs:
-    command: init
-  env:
-    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-    ARM_TENANT_ID: $(ARM_TENANT_ID)
-    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-
-- task: TerraformCLI@0
-  displayName: Apply Changes
-  inputs:
-    command: apply
-  env:
-    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-    ARM_TENANT_ID: $(ARM_TENANT_ID)
-    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+steps: 
+- template: apply.yml@Terraform
