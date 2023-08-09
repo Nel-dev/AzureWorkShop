@@ -15,7 +15,7 @@ resources:
   repositories:
     - repository: Terraform
       type: github
-      endpoint: Nel-dev
+      endpoint: Github
       name: Nel-dev/Azure-terraform
       ref: main
 
