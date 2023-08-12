@@ -26,7 +26,7 @@ resource "azurerm_service_plan" "backend" {
   sku_name                 =  "P1v2"
 }
 
-resource "azurerm_Linux_web_app" "backend" {
+resource "azurerm_linux_web_app" "backend" {
   name                = "Backend-webapp-6666"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_service_plan.backend.location
